@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.sajib.notetaking.activities.CreateNoteActivity
 import com.sajib.notetaking.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.createnotebtn.setOnClickListener(View.OnClickListener {
 
-            var intent= Intent(this,CreateNoteActivity::class.java)
+            var intent= Intent(this, CreateNoteActivity::class.java)
             startActivity(intent)
 
 

@@ -1,4 +1,4 @@
-package com.sajib.notetaking.roomimplementation
+package com.sajib.notetaking
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
