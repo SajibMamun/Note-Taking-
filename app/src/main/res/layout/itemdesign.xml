@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:id="@+id/itemlayoutid"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color4"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello day"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/summarynotes"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFF"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/notedetailsid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The best note-taking apps
+Microsoft OneNote for a free note-taking app.
+Apple Notes for Apple users.
+Google Keep for Google power users.
+Notion for collaboration.
+Obsidian for power note-takers.
+Joplin for an Evernote alternative."
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="4"
+            android:layout_marginTop="5dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/editnotebtnid"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/editnotes"
+                app:layout_constraintEnd_toStartOf="@id/deletenotebtn"
+           app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="40dp"
+                />
+            <ImageView
+                android:id="@+id/deletenotebtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/addtofvrtbtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/addtofavourite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="30dp"
+                />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
