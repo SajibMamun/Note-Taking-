@@ -1,6 +1,7 @@
-package com.sajib.notetaking.RecyclerView
+package com.sajib.notetaking
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -8,12 +9,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sajib.notetaking.R
 import com.sajib.notetaking.databinding.ItemdesignBinding
 import com.sajib.notetaking.roomdb.Note
 
 
-class NoteAdapter(var mContext:Context):ListAdapter<Note,NoteAdapter.NoteViewHolder>(comparator) {
+class NoteAdapter(var mContext:Context,var listener: UserClickedListener):ListAdapter<Note, NoteAdapter.NoteViewHolder>(
+    comparator
+) {
 
 
 
@@ -47,6 +49,26 @@ getItem(position).let {
 
 
 
+
+    holder.binding.deletenotebtn.setOnClickListener {_->
+        listener.NoteDelete(it,mContext)
+    }
+
+
+    holder.binding.editnotebtnid.setOnClickListener {_ ->
+      //  listener.NoteUpdate(it)
+        var intent= Intent(mContext,EditNoteActivity::class.java)
+        intent.putExtra("id",it.NoteID)
+        intent.putExtra("title",it.NoteTitle)
+        intent.putExtra("description",it.NoteDetails)
+        mContext.startActivity(intent)
+    }
+
+
+
+
+
+
     //setcolor
     val index: Int = position % backgroundColors.size
     val color = ContextCompat.getColor(mContext, backgroundColors[index])
@@ -60,6 +82,11 @@ getItem(position).let {
 
         Toast.makeText(mContext,"added to favourite",Toast.LENGTH_SHORT).show()
     }
+
+
+
+
+
 
 
 

@@ -47,9 +47,10 @@ class CreateNoteActivity : AppCompatActivity() {
 
         }
 
-
-
-
-
+    }
+    companion object{
+        const val id_key="id"
+        const val id_title="title"
+        const val id_desc="description"
     }
 }
