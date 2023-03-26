@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sajib.notetaking.databinding.ActivityCreateNoteBinding
+import com.sajib.notetaking.roomdb.Note
+import com.sajib.notetaking.roomdb.UserDatabase
 
 class CreateNoteActivity : AppCompatActivity() {
 
@@ -25,8 +27,9 @@ class CreateNoteActivity : AppCompatActivity() {
 
 
             var noteobj= Note(noteid, title, notedescrip)
-            var noteDao=UserDatabase.getInstance(this).getNoteDao()
+            var noteDao= UserDatabase.getInstance(this).getNoteDao()
             noteDao.noteInsert(noteobj)
+
 
 
 
