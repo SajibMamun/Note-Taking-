@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateNoteActivity"
+    android:orientation="vertical">
+    
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <EditText
+                        android:id="@+id/notetitleEtid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="title"
+                        android:layout_margin="20dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/notedescripEtid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Start Typing..."
+                        android:layout_margin="20dp"
+                        android:background="@null"
+                        />
+
+
+
+                    <Button
+                        android:id="@+id/savebtnid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:text="Save"
+                        android:backgroundTint="#E2C234"
+                        />
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+
+
+
+
+</LinearLayout>

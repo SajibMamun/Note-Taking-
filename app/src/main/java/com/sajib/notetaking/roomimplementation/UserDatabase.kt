@@ -1,4 +1,4 @@
-package com.sajib.notetaking
+package com.sajib.notetaking.roomimplementation
 
 import android.content.Context
 import androidx.room.Database
